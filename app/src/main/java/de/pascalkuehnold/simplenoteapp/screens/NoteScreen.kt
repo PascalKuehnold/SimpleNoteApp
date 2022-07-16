@@ -21,13 +21,11 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.stringResource
-import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import de.pascalkuehnold.simplenoteapp.R
 import de.pascalkuehnold.simplenoteapp.components.NoteButton
 import de.pascalkuehnold.simplenoteapp.components.NoteInputText
 import de.pascalkuehnold.simplenoteapp.components.NoteRow
-import de.pascalkuehnold.simplenoteapp.data.NotesDataSource
 import de.pascalkuehnold.simplenoteapp.model.Note
 
 
@@ -130,10 +128,4 @@ fun NoteScreen(
             }
         }
     }
-}
-
-@Preview(showBackground = true)
-@Composable
-fun NoteScreenPreview() {
-    NoteScreen(notes = NotesDataSource().loadNotes(), onAddNote = {}, onRemoveNote = {})
 }

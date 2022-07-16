@@ -15,7 +15,7 @@ import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
 import de.pascalkuehnold.simplenoteapp.model.Note
-import java.time.format.DateTimeFormatter
+import de.pascalkuehnold.simplenoteapp.util.formatDate
 
 
 /**
@@ -53,7 +53,7 @@ fun NoteRow(
             )
 
             Text(
-                text = note.entryDate.format(DateTimeFormatter.ofPattern("EEE, d MMM")),
+                text = formatDate(note.entryDate.time),
                 style = MaterialTheme.typography.caption
             )
 
